@@ -1,0 +1,19 @@
+Exercise 1: Outdoor Market
+In preparation for the holidays, you are designing the outdoor Christmas market that will be set up along the main pedestrian street in the capital of the country of Algorithms. A total of N outdoor shops are to be installed along the pedestrian street, and M non-overlapping areas between the flower beds that decorate the street have already been identified as suitable for the installation of the shops.
+
+Each such area i on the pedestrian street is defined by an interval of natural numbers [si, fi], where si represents the starting point and fi the endpoint of the interval. Outdoor shops can be installed at any (integer) point within these areas, but naturally, no more than one shop is allowed to be installed at the same point.
+
+The space available to the customers of a shop is proportional to its distance from the nearest neighboring shop. To maximize the available space for all customers, the Mayor proposed calculating a placement of all N shops in the selected areas [s1, f1], ..., [sM, fM] of the pedestrian street in such a way as to maximize the minimum distance between a shop and its closest neighboring shop. You decide to write a program to calculate such a placement of the shops easily and efficiently.
+
+Input Data
+Your program will initially read from the standard input two positive integers, the number N of shops and the number M of areas. Each of the next M lines will provide two non-negative integers si and fi, separated by a space, representing the start and end of the i-th area. The areas [si, fi] will be given in arbitrary order and will be pairwise disjoint, while their total length will be no less than N.
+
+Output Data
+Your program must print to the standard output a single positive integer: the minimum distance between two consecutive shops in a placement of all N shops that maximizes this minimum distance.
+
+Constraints
+1 ≤ N ≤ 10^6
+1 ≤ M ≤ 10^5
+0 ≤ si ≤ fi ≤ 15 ⋅ 10^8
+∑ (fi - si + 1) ≥ N
+Time limit: 1 secondMemory limit: 64 MB
