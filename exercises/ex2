@@ -1,0 +1,18 @@
+Exercise 2: Connecting Trees with Two Criteria
+
+Recently, a conflict has erupted in the country of Algorithms regarding the usefulness and efficiency of various algorithmic techniques. Among the most uncompromising are the supporters of Greed and the supporters of Binary Search. The President of the country is trying to calm things down and explain that all techniques are useful, and that efficient solutions to complex algorithmic problems usually require a combination of algorithmic techniques. As an example, he suggests calculating a spanning tree that maximizes the ratio of the total profit to the total weight of the edges it includes.
+
+More specifically, consider an undirected connected graph G(V, E) with |V| = N vertices and |E| = M edges. Each edge e provides a profit p(e) and incurs a weight w(e) if it is included in the selected spanning tree of G. The goal is to calculate a spanning tree T of G that maximizes the ratio ∑e∈T p(e) / ∑e∈T w(e). The President claims that efficiently solving this problem requires a smart combination of algorithmic techniques and asks you to write a program to confirm this claim.
+
+Input Data
+Your program will initially read from the standard input two positive integers, the number N of vertices and the number M of edges of a connected graph. Each of the next M lines will provide four positive integers u(e), v(e), p(e), w(e) representing an edge e. The first two integers denote the vertices u(e) and v(e), with u(e) ≠ v(e), which form the endpoints of e. The next two integers denote the profit p(e) and the weight w(e) of edge e.
+
+Output Data
+Your program must print to the standard output two integers: the total profit p(T) = ∑e∈T p(e) and the total weight w(T) = ∑e∈T w(e) of the spanning tree T of G that maximizes the ratio p(T)/w(T). Specifically, your program must print the integers p(T)/gcd(p(T), w(T)) and w(T)/gcd(p(T), w(T)), separated by a space (dividing by the GCD handles cases where there is more than one optimal spanning tree).
+
+Constraints
+2 ≤ N ≤ 50,000
+1 ≤ M ≤ 200,000
+1 ≤ u(e), v(e) ≤ N
+1 ≤ p(e), w(e) ≤ 200
+Time limit: 3 secondsMemory limit: 64 MB
