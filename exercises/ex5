@@ -1,0 +1,26 @@
+Exercise 5: Route Shortcut
+
+We are at our favorite beach, where we went for a winter dip, and now we must get home—in time for a very important videoconference—in exactly B hours!
+
+We know the country's road network, which consists of N cities (numbered from 1 to N) and M one-way roads. Each road e = (u, v) allows us to travel from city u, at one end, to city v, at the other end, in ℓ(e) hours. Our favorite beach is located in city s and our home is in city t. Under normal conditions, it seems impossible to cover the distance from city s to city t in just B hours.
+
+Fortunately, however, our state-of-the-art car has the ability to travel at lightning speed along a road. When this happens on a road e = (u, v), we traverse the distance from city u to city v in mere minutes, effectively reducing ℓ(e) to zero. Unfortunately, this ability can be used only a few times during the entire lifetime of our car.
+
+Therefore, we want to determine the minimum number of roads on which, if we travel at lightning speed (thus effectively reducing the travel time on those roads to zero), we can manage to get from our favorite beach, in city s, to our home, in city t, in at most B hours—ensuring we are on time for our videoconference.
+
+Input Data:
+Your program will read from the standard input a directed graph representing the country's road network, the cities s and t, and the time B available to us. In the first line, five natural numbers are given: the number of cities N, the number of roads M, the city s where our favorite beach is located, the city t where our home is located, and the time B (in hours) available to us. This is followed by M lines, each describing a one-way road. In the i-th line, three natural numbers are provided, corresponding to the starting city u₍ᵢ₎ and the ending city v₍ᵢ₎ of the i-th road, and the travel time ℓ₍ᵢ₎ (in hours) required to traverse the road e₍ᵢ₎ = (u₍ᵢ₎, v₍ᵢ₎).
+
+Output Data:
+Your program should print to the standard output (on the first line) an integer representing the minimum number of roads on which, if we travel at very high speed, we can get from city s to city t in at most B hours.
+
+Constraints:
+
+3 ≤ N ≤ 1,000
+3 ≤ M ≤ 10,000
+1 ≤ B ≤ 10⁹
+1 ≤ ℓ₍ᵢ₎ ≤ 10⁶
+1 ≤ s, t ≤ N, with s ≠ t
+Time Limit: 1 sec.
+Memory Limit: 64 MB.
+
