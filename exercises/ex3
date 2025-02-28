@@ -1,0 +1,23 @@
+Exercise 3: New Year's Eve
+
+You are a member of the organizing committee for the New Year's Eve party at the Presidential Mansion of the Country of Algorithms, and you have been tasked with seating the guests at the tables. The protocol is strict: the N guests enter the grand dining hall one by one, in the order in which they received their invitations. Each table can seat at most K guests, and there is no limit to the number of tables you may use. Every new guest either joins the previous guest at their table (say, table t, but only if there are available seats at table t) or becomes the first to sit at an empty table (say, table t + 1). In the latter case (which may occur even if table t is not full), table t is considered “closed” permanently, and subsequent guests cannot sit there (nor at any of the previous tables).
+
+You know very well that joy, love, and smiles are contagious! Thus, the cheerfulness level of the guests sitting at the same table is equal to the highest individual cheerfulness level among them. You have done your research and know the cheerfulness levels h(1), h(2), …, h(N) of the guests at the New Year's Eve party. Now, if guests i, …, j, for some i ≤ j with (j − i + 1) ≤ K, sit at the same table, then the total cheerfulness for that table is given by:
+  (j − i + 1) · max{ h(i), h(i+1), …, h(j) }.
+
+Since New Year's is fast approaching and there are many guests, you need to write a program that computes how the guests should be seated so that the sum of the total cheerfulness of all tables is maximized.
+
+Input Data:
+First, the program will read from the standard input two positive integers corresponding to the number of guests N and the capacity K of the tables. On the next line, there will be N natural numbers (separated by spaces) corresponding to the cheerfulness levels h(1), h(2), …, h(N) of the guests at the New Year's Eve party.
+
+Output Data:
+The program should print to the standard output (on the first line) the maximum possible sum of the total cheerfulness for all tables.
+
+Constraints:
+
+3 ≤ N ≤ 5 · 10⁴
+2 ≤ K ≤ 10³
+0 ≤ h(i) ≤ 10⁵
+N · max{ h(1), h(2), …, h(N) } ≤ 10⁹
+Time Limit: 1 second
+Memory Limit: 64 MB
