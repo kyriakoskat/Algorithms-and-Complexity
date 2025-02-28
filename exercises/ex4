@@ -1,0 +1,27 @@
+Exercise 4: Chemical Waste
+
+In a chemical laboratory, there are N different substances that constitute hazardous waste from experiments, and they must be placed into K metal bottles to be safely transported to a designated facility outside the laboratory. The substances are numbered from 1 to N and, for safety reasons, must be placed in the bottles in that order—with the entire quantity of each substance being placed in a single bottle. The bottles are quite large and the total amount of each substance is sufficiently small so that there are no capacity issues (i.e., even all the substances could fit into the same bottle). However, there is a risk of chemical reaction between substances in the same bottle, which results in a significant release of energy. Specifically, for every pair of substances i and j that are placed in the same bottle, the chemical reaction between them produces energy equal to A[i, j] units.
+
+Based on the above, the procedure followed by the laboratory staff for packaging the substances is as follows: The first t₁ substances in order are placed into the first bottle, the next t₂ substances into the second bottle, and so on, until all substances have been placed into the K bottles. Thus, the energy that could be released by the chemical reaction of the substances in the first bottle is
+
+  ∑₁≤i<j≤t₁ A[i, j].
+
+For the second bottle it is
+
+  ∑ₜ₁₊₁≤i<j≤t₂ A[i, j],
+
+and so on. The total energy that could be released by the chemical reaction of the substances in all K bottles is the sum of these quantities. For safety reasons during transportation, the laboratory staff want to determine the indices t₁, t₂, …, tₖ₋₁ at which the bottle is changed, so that the total energy that can be released from all the bottles is minimized. You need to write a program for this purpose.
+
+Input Data:
+Initially, the program will read from standard input two positive integers N and K that represent the number of substances and the number of bottles, respectively. Next, the program will read N − 1 lines, where the i-th line contains N − i integers separated by spaces. The j-th integer on the i-th line corresponds to the energy A[i, j + i] (the matrix A is symmetric with respect to the diagonal, i.e., A[i, j] = A[j, i] for every 1 ≤ i < j ≤ N, and the diagonal contains zeros, i.e., A[i, i] = 0 for every 1 ≤ i ≤ N).
+
+Output Data:
+The program should print to the standard output (on the first line) an integer representing the minimum amount of energy that can be released.
+
+Constraints:
+
+0 ≤ A[i, j] ≤ 99
+1 ≤ K ≤ 500
+K ≤ N ≤ 1500
+Time Limit: 1 second
+Memory Limit: 64 MB
